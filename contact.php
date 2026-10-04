@@ -1,0 +1,7 @@
+<?php
+$pageTitle='Contact';include 'includes/header.php';include 'includes/navbar.php';
+$sent=false;if($_SERVER['REQUEST_METHOD']==='POST')$sent=true;
+?>
+<div class="container page-title"><div class="section-kicker">We are here for you</div><h1>Contact Us</h1><p>Have a question? Send us a message.</p></div>
+<section class="container section" style="padding-top:10px"><div class="booking-layout"><div class="glass-panel"><h2>Let's Talk</h2><p class="desc" style="margin-top:10px">Our travel team can help with packages, booking questions and trip planning.</p><div class="icon-list"><div class="icon-box">✉<b>Email</b>hello@tourtravel.com</div><div class="icon-box">☎<b>Phone</b>+91 98765 43210</div><div class="icon-box">⌖<b>Office</b>Madurai, Tamil Nadu</div><div class="icon-box">◷<b>Hours</b>Mon - Sat, 9 AM - 7 PM</div></div></div><div class="glass-panel"><?php if($sent): ?><div class="alert alert-success" style="width:100%;margin:0 0 15px">Thanks! Your message has been received.</div><?php endif;?><form method="post"><div class="field"><label>NAME</label><input name="name" required></div><div class="field"><label>EMAIL</label><input type="email" name="email" required></div><div class="field"><label>MESSAGE</label><textarea name="message" required></textarea></div><button class="btn btn-primary full">Send Message</button></form></div></div></section>
+<?php include 'includes/footer.php'; ?>
